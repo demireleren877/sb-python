@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            grid-template-columns: auto auto auto auto;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="background-color: lemonchiffon">
+
+    <h1 style="padding-left: 20px; color: black;">Hoşgeldin {{name}}</h1>
+    <div class="grid-container">
+        {% for coffee in coffees %}
+
+        <div class="grid-item" onclick="">
+            <div style="flex-wrap: wrap; display: flex; flex-direction: row; width: 100%;">
+                <img src="{{coffee.image}}" alt="coffee" style="width: 100px; height: 100px; margin-right: 10%;">
+                <!-- <h6>{{coffee.description}}</h6> -->
+                <h3>{{coffee.name}}</h3>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</body>
+
+</html>
